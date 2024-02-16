@@ -4,3 +4,245 @@ html {
   font-family: "JetBrains Mono";
   font-weight: 700;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #14131b;
+}
+header {
+  font-size: 2.4rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #817d92;
+  margin-top: 40px;
+}
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 540px;
+  height: 80px;
+  margin-top: 31px;
+  padding: 0px 32px;
+  background-color: #24232c;
+}
+#result {
+  font-size: 3.2rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e6e5ea;
+  opacity: 0.25;
+}
+.display div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#copySpan {
+  font-size: 1.8rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a4ffaf;
+  display: none;
+}
+#copyIcon:hover {
+  cursor: pointer;
+  filter: white;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+  height: 528px;
+  flex-grow: 0;
+  margin: 24px 0px 100px;
+  background-color: #24232c;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 264px;
+  margin-top: 24px;
+}
+h2 {
+  font-size: 1.8rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e6e5ea;
+}
+#value {
+  font-size: 3.2rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a4ffaf;
+}
+.rangeDiv {
+  position: relative;
+  margin-top: 26px;
+}
+#range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 476px;
+  height: 8px;
+  margin: 0px;
+  flex-grow: 0;
+  background-color: #18171f;
+}
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-grow: 0;
+  background-color: #e6e5ea;
+}
+#range::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  border: solid 2px #a4ffaf;
+  background-color: #18171f;
+}
+#progress {
+  position: absolute;
+  width: 50%;
+  max-width: 475px;
+  height: 8px;
+  left: 1px;
+  flex-grow: 0;
+  background-color: #a4ffaf;
+}
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 42px 0px 0px 32px;
+  align-self: flex-start;
+}
+.choose {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.choose input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  border: solid 2px #e6e5ea;
+}
+.choose input:hover {
+  cursor: pointer;
+  border: solid 2px #a4ffaf;
+}
+.choose input:checked {
+  background-image: url(images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: #a4ffaf;
+}
+.choose span {
+  font-size: 1.8rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e6e5ea;
+}
+.levelSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 476px;
+  height: 72px;
+  margin-top: 32px;
+  padding: 21px 31.5px 20px 32px;
+  background-color: #18171f;
+}
+
+.levelSection span {
+  font-size: 1.8rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #817d92;
+}
+#level {
+  font-size: 2.4rem;
+  color: #e6e5ea;
+}
+.dificulty {
+  display: flex;
+  align-items: center;
+  gap: 15.5px;
+}
+.levelDivs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.levelDivs div {
+  width: 10px;
+  height: 28px;
+  border: solid 2px #e6e5ea;
+}
+/* to change levels  */
+.tooWeak #level1 {
+  background-color: #f64a4a;
+  border: none;
+}
+.weak #level2,
+.weak #level1 {
+  background-color: #18171f;
+  border: none;
+}
+.medium #level3,
+.medium #level2,
+.medium #level1 {
+  background-color: #24232c;
+  border: none;
+}
+.strong #level4,
+.strong #level3,
+.strong #level2,
+.strong #level1 {
+  background-color: #a4ffaf;
+  border: none;
+}
+#generate {
+  width: 476px;
+  height: 65px;
+  flex-grow: 0;
+  margin-top: 32px;
+  border: none;
+  background-color: #a4ffaf;
+  position: relative;
+}
+#generate:hover {
+  cursor: pointer;
+  background-color: #24232c;
+  border: solid 2px #a4ffaf;
+}
+#generate:hover #generate span {
+  color: red;
+}
+#generate span,
+#generate img {
+  pointer-events: none;
+}
+#generate span {
+  margin-right: 24px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #24232c;
+  font-family: "JetBrains Mono";
+}
