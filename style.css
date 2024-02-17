@@ -51,7 +51,9 @@ header {
 }
 #copyIcon:hover {
   cursor: pointer;
-  filter: white;
+}
+#copyIcon:hover path {
+  fill: white;
 }
 main {
   display: flex;
@@ -113,8 +115,7 @@ h2 {
 }
 #progress {
   position: absolute;
-  width: 50%;
-  max-width: 475px;
+  width: 0%;
   height: 8px;
   left: 1px;
   flex-grow: 0;
@@ -179,6 +180,7 @@ h2 {
 #level {
   font-size: 2.4rem;
   color: #e6e5ea;
+  display: none;
 }
 .dificulty {
   display: flex;
@@ -202,13 +204,13 @@ h2 {
 }
 .weak #level2,
 .weak #level1 {
-  background-color: #18171f;
+  background-color: #fb7c58;
   border: none;
 }
 .medium #level3,
 .medium #level2,
 .medium #level1 {
-  background-color: #24232c;
+  background-color: #f8cd65;
   border: none;
 }
 .strong #level4,
@@ -218,6 +220,7 @@ h2 {
   background-color: #a4ffaf;
   border: none;
 }
+/*  */
 #generate {
   width: 476px;
   height: 65px;
@@ -231,13 +234,7 @@ h2 {
   cursor: pointer;
   background-color: #24232c;
   border: solid 2px #a4ffaf;
-}
-#generate:hover #generate span {
   color: red;
-}
-#generate span,
-#generate img {
-  pointer-events: none;
 }
 #generate span {
   margin-right: 24px;
@@ -245,4 +242,89 @@ h2 {
   text-align: center;
   color: #24232c;
   font-family: "JetBrains Mono";
+}
+#generate:hover span {
+  color: #a4ffaf;
+}
+#generate:hover img path {
+  color: #a4ffaf;
+}
+@media (max-width: 425px) {
+  header {
+    font-size: 1.6rem;
+  }
+  .display {
+    width: 343px;
+    height: 64px;
+    padding: 17px 15.5px 15px 16px;
+    margin-top: 16px;
+  }
+  #result {
+    font-size: 2.4rem;
+  }
+  #copyIcon {
+    width: 17.5px;
+    height: 20px;
+  }
+  #copySpan {
+    font-size: 1.5rem;
+  }
+  main {
+    width: 343px;
+    height: 440px;
+    margin-top: 16px;
+  }
+  .heading {
+    width: 311px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 21px;
+    gap: 0px;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  #value {
+    font-size: 2.4rem;
+  }
+  .rangeDiv {
+    margin-top: 23px;
+  }
+  #range {
+    width: 311px;
+  }
+  .checks {
+    gap: 16px;
+    margin-left: 16px;
+  }
+  .choose {
+    gap: 20px;
+  }
+  .choose span {
+    font-size: 1.6rem;
+  }
+  .levelSection {
+    width: 311px;
+    height: 56px;
+    padding: 14px 16px;
+  }
+  .levelSection span {
+    font-size: 1.6rem;
+  }
+  #level {
+    font-size: 1.8rem;
+  }
+  .dificulty {
+    gap: 16px;
+  }
+  #generate {
+    width: 311px;
+    height: 56px;
+    margin-top: 16px;
+  }
+  #generate span {
+    font-size: 1.6rem;
+    margin-right: 16px;
+  }
 }
