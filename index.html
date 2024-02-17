@@ -13,7 +13,12 @@
       <p id="result">P4$5W0rD!</p>
       <div>
         <span id="copySpan">COPIED</span>
-        <img src="images/icon-copy.svg" alt="copy" id="copyIcon" />
+        <img
+          src="images/icon-copy.svg"
+          alt="copy"
+          id="copyIcon"
+          onclick="copyText()"
+        />
       </div>
     </section>
     <main>
@@ -27,19 +32,29 @@
       </div>
       <div class="checks">
         <div class="choose">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name="upperLetters"
+            class="checkbox"
+            id="upperLetters"
+          />
           <span>Include Uppercase Letters</span>
         </div>
         <div class="choose">
-          <input type="checkbox" name="" id="" />
+          <input
+            type="checkbox"
+            name="lowerLetters"
+            class="checkbox"
+            id="lowerLetters"
+          />
           <span>Include Lowercase Letters</span>
         </div>
         <div class="choose">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="numbers" class="checkbox" id="numbers" />
           <span>Include Numbers</span>
         </div>
         <div class="choose">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="symbols" class="checkbox" id="symbols" />
           <span>Include Symbols</span>
         </div>
       </div>
