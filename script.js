@@ -1,6 +1,7 @@
 // copy password
 const copiedSpan = document.getElementById("copySpan");
 function copyText() {
+  // if result password is "" or default word it does not copy anything
   if (result.innerText != "" && result.innerText != "P4$5W0rD!") {
     let range = document.createRange();
     range.selectNode(result);
@@ -25,6 +26,7 @@ range.addEventListener("input", (event) => {
   progress.style.width = `${(exactValue * 100) / 20 - 0.6}%`;
 
   // changes themes acording to input's value
+  // if value < 5 it sets different levels then if value >= 5;
   if (exactValue < 5 && exactValue > 2 && exactLevel > 2) {
     document.body.classList.add("weak");
     document.body.classList.remove("tooWeak");
@@ -107,6 +109,7 @@ let exactLevel = 0;
 
 checkBoxes.forEach((Element) => {
   Element.addEventListener("change", (event) => {
+    // chatching how many boxes are checked and adding exact levels;
     if (Element.checked) {
       exactLevel += 1;
     } else {
@@ -215,6 +218,7 @@ generate.addEventListener("click", () => {
   let length = splitedArr.length;
   let password = "";
   result.style.opacity = "1";
+  // if password text length is 0 it sets default password again
   if (length != 0) {
     for (let i = 0; i < exactValue; i++) {
       let randomWord = splitedArr[Math.floor(Math.random() * length)];

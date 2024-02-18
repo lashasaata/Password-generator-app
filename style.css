@@ -246,8 +246,9 @@ h2 {
 #generate:hover span {
   color: #a4ffaf;
 }
+/* cant set color on icon */
 #generate:hover img path {
-  color: #a4ffaf;
+  fill: #a4ffaf;
 }
 @media (max-width: 425px) {
   header {
