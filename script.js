@@ -1,3 +1,4 @@
+// password generator project
 // copy password
 const copiedSpan = document.getElementById("copySpan");
 function copyText() {
